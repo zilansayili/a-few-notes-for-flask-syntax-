@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+        Main Block Page
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <h3>main page</h3>
+    <p>render ile gönderdiğim python içeriğim şu :{#{{keynumber}}#} </p>
+
+    <!-- iki süslü parantez içinde yazman lazım py kodlarını ve eğer html içindeki py kodlarını yorum satırı haline getirmek istersen {# kodlar burada olacak #} bunu kullanman lazım-->
+
+    {#<p>{{keyarticle["title"]}}</p>#}
+    {#<p>{{keyarticle.body}}</p>#}
+    <!--sözlüklere key.ismi ve key["ismi"] şekillerinde erişebiliriz-->
+
+    <!--flastaki block yapısına örnek
+    page source'a bakarsak paragrafın yazdılığını görürsün ama block görülmez.-->
+
+    {% block zilan %}
+    <!--burayı istersen boş da bırabilirsin-->
+    {% endblock %}
+
+
+</body>
+
+</html>
